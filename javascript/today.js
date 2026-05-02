@@ -1,7 +1,9 @@
 let getName = prompt("Adınızı giriniz");
-let showName = `${getName[0].toUpperCase()}${getName.slice(1).toLowerCase()}`;
+if (getName) {
+  getName = `${getName[0].toUpperCase()}${getName.slice(1).toLowerCase()}`;
+} else { getName = "ziyaretçi" }
 let greeting = document.querySelector("#guestName");
-greeting.innerHTML = showName;
+greeting.innerHTML = getName;
 
 let gregorianDate = document.getElementById("gregorian-date");
 let hijriDate = document.getElementById("hijri-date");
